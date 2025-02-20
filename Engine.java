@@ -38,7 +38,7 @@ public class Engine implements EngineRequirements {
     }
 
     public String toString() {
-        return("Engine has fuel type " + this.f + " current fuel level: " + this.currentFuelLevel + "and max fuel level: " + this.maxFuelLevel);
+        return("Engine has fuel type " + this.f + " current fuel level: " + this.currentFuelLevel + " and max fuel level: " + this.maxFuelLevel);
     }
 
     public static void main(String[] args) {
