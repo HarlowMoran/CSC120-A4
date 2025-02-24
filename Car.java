@@ -6,21 +6,33 @@ public class Car implements CarRequirements{
     private int seatsRemaining;
     private ArrayList<Passenger> passengerList;
 
-
+/**
+ * Creates the car object.
+ * @param capacity
+ * @param seatsRemaining
+ * @param passengerList
+ */
     public Car(int capacity, int seatsRemaining, ArrayList<Passenger> passengerList){
         this.capacity = capacity;
         this.seatsRemaining = seatsRemaining;
         this.passengerList = new ArrayList<>(passengerList);
 
     }
+    /**
+     * returns the capacity
+     */
     public int getCapacity() {
         return this.capacity;
     }
-
+    /**
+     * returns the seats remaining
+     */
     public int seatsRemaining() {
         return this.seatsRemaining;
     }
-
+    /**
+     * Adds a passenger to the car
+     */
     public Boolean addPassenger(Passenger p) {
         if(passengerList.contains(p)){
             return false;
@@ -33,7 +45,9 @@ public class Car implements CarRequirements{
             return false;
         }
     }
-    
+    /**
+     * removes a passenger from the car
+     */
     public Boolean removePassenger(Passenger p) {
         if(passengerList.contains(p)){
             passengerList.remove(p);

@@ -4,7 +4,7 @@ public class Engine implements EngineRequirements {
     private double currentFuelLevel;
     private double maxFuelLevel;
     /**
-     * 
+     * creates an object engine
      * @param f
      * @param currentFuelLevel
      * @param maxFuelLevel

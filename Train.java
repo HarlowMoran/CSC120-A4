@@ -10,6 +10,13 @@ public class Train implements TrainRequirements{
     int seatsRemaining;
     private ArrayList<Passenger> passengerList;
     
+    /**
+     * creates a train object 
+     * @param fuelType
+     * @param fuelCapacity
+     * @param nCars
+     * @param passengerCapacity
+     */
     public Train(FuelType fuelType, double fuelCapacity, int nCars, int passengerCapacity){
         this.engine = new Engine(FuelType.ELECTRIC, 100, 100);
         this.carList = new ArrayList<Car>();

@@ -7,6 +7,12 @@ public class Passenger implements PassengerRequirements{
  private String name;
  private ArrayList<Car> carList;
 
+ /**
+  * Creates a passenger object.
+  * @param name
+  * @param carList
+  */
+
  public Passenger(String name, ArrayList<Car> carList){
      this.name = name;
      this.carList = carList;
