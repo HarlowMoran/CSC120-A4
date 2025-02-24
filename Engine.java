@@ -49,6 +49,10 @@ public class Engine implements EngineRequirements {
         return("Engine has fuel type " + this.f + " current fuel level: " + this.currentFuelLevel + " and max fuel level: " + this.maxFuelLevel);
     }
 
+    /**
+     * New instance of engine.
+     * @param args
+     */
     public static void main(String[] args) {
         Engine myEngine = new Engine(FuelType.ELECTRIC, 0.0, 100.0);
         System.out.println(myEngine);
