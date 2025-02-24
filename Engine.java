@@ -16,11 +16,12 @@ public class Engine implements EngineRequirements {
         this.maxFuelLevel = maxFuelLevel;
 
     }
-
+    
+    
     public FuelType getFuelType() {
         return this.f;
     }
-
+    
     public double getMaxFuel() {
         return 0.;
     }
@@ -30,11 +31,18 @@ public class Engine implements EngineRequirements {
     }
 
     public void refuel() {
-
+        currentFuelLevel = maxFuelLevel;
     }
     
     public Boolean go() {
-        return true;
+        currentFuelLevel = currentFuelLevel - 1.0;
+        System.out.println(currentFuelLevel);
+        if(currentFuelLevel > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public String toString() {
