@@ -3,41 +3,45 @@ import java.util.ArrayList;
 public class Car implements CarRequirements{
     //Atributes
     private int capacity;
-    private int seatsRemaining;
     private ArrayList<Passenger> passengerList;
 
-/**
- * Creates the car object.
- * @param capacity
- * @param seatsRemaining
- * @param passengerList
- */
-    public Car(int capacity, int seatsRemaining, ArrayList<Passenger> passengerList){
+    /**
+     * Creates the car object.
+     * @param capacity
+     * @param passengerList
+    */
+    public Car(int capacity, ArrayList<Passenger> passengerList){
         this.capacity = capacity;
-        this.seatsRemaining = seatsRemaining;
-        this.passengerList = new ArrayList<>(passengerList);
+        this.passengerList = new ArrayList<Passenger>(passengerList);
 
     }
+
     /**
      * returns the capacity
+     * @return this.capacity
      */
     public int getCapacity() {
         return this.capacity;
     }
+
     /**
      * returns the seats remaining
+     * @return capacity - passengerList.size()
      */
     public int seatsRemaining() {
-        return this.seatsRemaining;
+        return (capacity - passengerList.size());
     }
+
     /**
-     * Adds a passenger to the car
+     * Adds a passenger to the car, if the passenger is not already on the car, and if the car is not full.
+     * However if the passenger is already on the car, or if the car is full, then returns false.
+     * @return true || false
      */
     public Boolean addPassenger(Passenger p) {
         if(passengerList.contains(p)){
             return false;
         } 
-        else if (seatsRemaining > 0){
+        else if (seatsRemaining() > 0){
             passengerList.add(p);
             return true;
         }
@@ -45,8 +49,11 @@ public class Car implements CarRequirements{
             return false;
         }
     }
+
     /**
-     * removes a passenger from the car
+     * If the passenger is already on the car, then removes a passenger from the car.
+     * If passenger is not on the car, returns false.
+     * @return true || false
      */
     public Boolean removePassenger(Passenger p) {
         if(passengerList.contains(p)){
@@ -57,9 +64,11 @@ public class Car implements CarRequirements{
             return false;
         }
     }
-
+    /**
+     * prints out a list of all the passengers in the car
+     */
     public void printManifest(){
-        System.out.println("Car has capacity: " + this.capacity + " seats remaining: " + this.seatsRemaining);
+        System.out.println(passengerList);
     }
 
 
