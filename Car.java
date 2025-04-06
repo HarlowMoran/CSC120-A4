@@ -71,5 +71,19 @@ public class Car implements CarRequirements{
         System.out.println(passengerList);
     }
 
+    /**
+     * new instance of car
+     * @param args
+     */
+    public static void main(String[] args) {
+        Car myCar = new Car(100, new ArrayList<Passenger>());
+        Passenger p = new Passenger("Me", new ArrayList<Car>());
+        myCar.addPassenger(p);
+        Passenger q = new Passenger("You", new ArrayList<Car>());
+        myCar.addPassenger(q);
+        myCar.removePassenger(p);
+        System.out.println(myCar.passengerList.toString());
+    }
+
 
 }

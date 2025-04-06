@@ -26,11 +26,11 @@ __**YES**___ 1 pt: The `Car` class contains appropriately-encapsulated attribute
 
 ___**YES**__ 1 pt: The `Car` class has functional `addPassenger(...)` and `removePassenger(...)` methods
 
-___**PART**__ 1 pt: The `Car` class has a `printManifest()` method that prints a nicely-formatted roster of all `Passenger`s currently aboard the car
+___**YES**__ 1 pt: The `Car` class has a `printManifest()` method that prints a nicely-formatted roster of all `Passenger`s currently aboard the car
 
 ### Level 3 (3 pts)
 
-___**PART**__ 1 pt: The `Passenger` class uses appropriate methods from the `Car` class to implement its `boardCar(...)` and `getOffCar(...)` methods
+___**YES**__ 1 pt: The `Passenger` class uses appropriate methods from the `Car` class to implement its `boardCar(...)` and `getOffCar(...)` methods
 
 __**YES**___ 1 pt: The `Train` class has all expected attributes / relationships with the other classes
 
